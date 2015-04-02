@@ -17,6 +17,7 @@ class triangle
                 friend ifstream& operator>>(ifstream&, triangle&);
 
         private:
+		//hello
                 int base;
                 int height;
                 double area;
