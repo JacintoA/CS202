@@ -1,0 +1,19 @@
+#compiler
+CC=g++
+
+#passed to compiler
+CFLAGS = -c -Wall
+
+all: overload
+
+overload: test.o triangle.o
+	$(CC) test.o triangle.o -o overload
+
+test.o: test.cpp triangle.o 
+	$(CC) $(FLAGS) test.cpp
+
+triangle.o: triangle.cpp
+	$(CC) $(FLAGS) triangle.cpp
+
+clean: 
+	rm -rf *.o overload
